@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Disaster Response Force Academy (NDRFA) | Nagpur</title>
+    <meta name="description"
+        content="National Disaster Response Force Academy (NDRFA), Nagpur - Excellence in Disaster Response Training. Rescuers' Nursery under NDMA.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        :root {
+            --ndrf-green: #006633;
+            --ndrf-orange: #FF6600;
+            --light-green: #90EE90;
+            --dark-orange: #CC5200;
+            --primary: #006633;
+            --secondary: #FF6600;
+        }
+
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn {
+            border-radius: 0 !important;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            transition: all 0.3s ease;
+            padding: 1rem 0;
+            background: var(--ndrf-green) !important;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 102, 51, 0.3);
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #ffffff !important;
+        }
+
+        .navbar-dark .navbar-brand {
+            color: #ffffff !important;
+        }
+
+        .navbar-brand {
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--ndrf-orange);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .dropdown-toggle::after {
+            display: none;
+        }
+
+        .nav-link::after {
+            display: none;
+        }
+
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                background: var(--ndrf-green) !important;
+                padding: 1.5rem;
+                margin-top: 1rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .navbar-nav .nav-item {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .navbar-nav .nav-link {
+                padding: 0.75rem 0 !important;
+            }
+
+            .dropdown-menu {
+                background: transparent !important;
+                box-shadow: none !important;
+                padding-left: 1rem;
+            }
+
+            .dropdown-item {
+                color: rgba(255, 255, 255, 0.8) !important;
+            }
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 80%;
+        }
+
+        .nav-link:hover {
+            color: var(--ndrf-orange) !important;
+        }
+
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+        }
+
+        .dropdown-item {
+            padding: 0.6rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background: var(--light-green);
+            color: var(--ndrf-green);
+            transform: translateX(5px);
+        }
+
+        .hero-section {
+            height: 80.25vh;
+            min-height: 600px;
+            position: relative;
+        }
+
+        .hero-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.4) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .btn-primary-custom {
+            background: var(--ndrf-green);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            color: white;
+        }
+
+        .btn-primary-custom:hover {
+            background: var(--light-green) !important;
+            color: var(--ndrf-green) !important;
+        }
+
+        .btn-cta-custom {
+            background: var(--ndrf-orange);
+            border: none;
+            padding: 1rem 2.5rem;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-cta-custom:hover {
+            background: var(--dark-orange) !important;
+            color: white !important;
+        }
+
+        .btn-outline-custom {
+            border: 2px solid white;
+            padding: 1rem 2.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-custom:hover {
+            background: white;
+            color: var(--ndrf-green);
+            transform: translateY(-3px);
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--ndrf-green);
+        }
+
+        .stat-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--ndrf-green), var(--light-green));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--ndrf-green);
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.4s ease;
+            border: 1px solid #e9ecef;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--ndrf-green);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--ndrf-green), var(--light-green));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .course-card {
+            background: white;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            height: 100%;
+            border: 1px solid #e9ecef;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--ndrf-green);
+            transform: scaleY(0);
+            transition: all 0.3s ease;
+        }
+
+        .course-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--ndrf-green);
+        }
+
+        .badge-wing {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+
+        .quick-action {
+            background: white;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .quick-action:hover {
+            border-color: var(--ndrf-green);
+            transform: translateY(-5px);
+        }
+
+        .quick-action-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, rgba(0, 102, 51, 0.1), rgba(144, 238, 144, 0.2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 2rem;
+            color: var(--ndrf-green);
+            transition: all 0.3s ease;
+        }
+
+        .quick-action:hover .quick-action-icon {
+            background: var(--ndrf-green);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            border: 1px solid #e9ecef;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--ndrf-green);
+        }
+
+        .testimonial-avatar {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--ndrf-green), var(--light-green));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            color: white;
+            border: 4px solid var(--light-green);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border: 1px solid #e9ecef;
+        }
+
+        .form-control-custom {
+            border: 2px solid #e9ecef;
+            padding: 1rem 1.25rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control-custom:focus {
+            border-color: var(--ndrf-green);
+            box-shadow: 0 0 0 4px rgba(0, 102, 51, 0.1);
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #006633 0%, #04512a 100%);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 0.3rem 0;
+        }
+
+        .footer-link:hover {
+            color: var(--ndrf-orange);
+            transform: translateX(5px);
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--ndrf-orange);
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+            height: 280px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 102, 51, 0.8), transparent);
+            opacity: 0;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .ticker-section {
+            background: linear-gradient(90deg, var(--ndrf-green), var(--dark-orange));
+            padding: 1rem 0;
+        }
+
+        .ticker-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 0;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .ticker-btn:hover {
+            background: white;
+            color: var(--ndrf-green);
+        }
+
+        .map-container {
+            overflow: hidden;
+            height: 250px;
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 991px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        .about-image {
+            border: 1px solid #e9ecef;
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100px;
+            height: 100px;
+            background: var(--ndrf-orange);
+            z-index: -1;
+        }
+
+        .counter-section {
+            background: linear-gradient(135deg, var(--ndrf-green), var(--dark-orange));
+            padding: 4rem 0;
+        }
+
+        .counter-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+        }
+
+        .counter-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .feather-icon {
+            width: 1.2rem;
+            height: 1.2rem;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav">
+
+    <!-- Top Info Bar -->
+    <div class="top-bar py-2 text-white d-none d-lg-block" style="background: var(--dark-orange);">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex gap-4 align-items-center">
+                <small><i class="bi bi-telephone-fill me-2"></i> +91-712-2567890</small>
+                <small><i class="bi bi-envelope-fill me-2"></i> contact@ndrfa.gov.in</small>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <div class="position-relative">
+                    <input type="text" class="form-control form-control-sm bg-white ps-3" placeholder="Search..."
+                        style="width: 180px;">
+                    <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-2 text-muted"></i>
+                </div>
+                <a href="#admissions" class="btn btn-sm fw-bold px-4"
+                    style="background: white; color: var(--dark-orange);">Join a Course</a>
+                <a href="#" class="text-white text-decoration-none small border-start ps-3">हिन्दी</a>
+                <a href="#" class="text-white text-decoration-none small"><i data-feather="log-in"
+                        class="feather-icon me-1"></i> e-LMS
+                    Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-xl navbar-dark main-nav" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-4" href="#">NDRFA</a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto text-uppercase fw-bold" style="font-size: 0.78rem;">
+                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i
+                                    data-feather="shield" class="feather-icon me-1"></i> About NDRFA</a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="#about">Vision & Mission</a></li>
+                                <li><a class="dropdown-item" href="#about">Motto</a></li>
+                                <li><a class="dropdown-item" href="#about">Academy Hierarchy</a></li>
+                                <li><a class="dropdown-item" href="#about">Administration</a></li>
+                                <li><a class="dropdown-item" href="#facilities">Infrastructure</a></li>
+                                <li><a class="dropdown-item" href="#about">Faculty</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i
+                                    data-feather="book" class="feather-icon me-1"></i> Training Programmes</a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li class="dropdown-header">Wing A</li>
+                                <li><a class="dropdown-item" href="#courses">CSSR (Collapsed Structure Search &
+                                        Rescue)</a></li>
+                                <li><a class="dropdown-item" href="#courses">MFR (Medical First Responder)</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="dropdown-header">Wing B</li>
+                                <li><a class="dropdown-item" href="#courses">Flood / Diving Rescue</a></li>
+                                <li><a class="dropdown-item" href="#courses">CBRN Response</a></li>
+                                <li><a class="dropdown-item" href="#courses">ToT / MT Programmes</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i
+                                    data-feather="folder" class="feather-icon me-1"></i> Resources</a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li class="dropdown-header">Schedules</li>
+                                <li><a class="dropdown-item" href="#calendar">Training Calendar</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="dropdown-header">Media</li>
+                                <li><a class="dropdown-item" href="#gallery">Media Gallery</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="dropdown-header">Digital Learning</li>
+                                <li><a class="dropdown-item" href="#">E-LMS</a></li>
+                                <li><a class="dropdown-item" href="#">E-Resources</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Events</a>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="#">Forthcoming Training / Courses</a></li>
+                                <li><a class="dropdown-item" href="#">Workshops / Seminars</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Procurement</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Recruitment</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section id="home" class="hero-section position-relative overflow-hidden">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="image/vid.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="container position-relative h-100 d-flex align-items-center">
+            <div class="hero-content text-white">
+                <h1 class="hero-title mb-4">Excellence in Disaster <br><span style="color: var(--ndrf-orange);">Response
+                        Training</span></h1>
+                <p class="hero-subtitle mb-5">"Aapda Sewa Sadaiv Sarvatra" <br><span class="opacity-75">Service in
+                        disasters always, everywhere</span></p>
+                <div class="d-flex gap-3 mt-4 flex-wrap">
+                    <a href="#courses" class="btn btn-primary-custom">Explore Courses</a>
+                    <a href="#admissions" class="btn btn-cta-custom">Join a Course</a>
+                </div>
+            </div>
+        </div>
+        <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4">
+            <a href="#about" class="text-white fs-4 bounce-animation">
+                <i data-feather="chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Ticker Section -->
+    <div class="ticker-section">
+        <div class="container d-flex align-items-center">
+            <button class="ticker-btn text-white me-4">Director's Message</button>
+            <div class="ticker-content overflow-hidden flex-grow-1">
+                <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"
+                    class="fw-medium text-white">
+                    Director Brig R Sathya Narayan welcomes new SDRF trainees. SAARC regional disaster cooperation
+                    remains a key priority. Earth Day Seminar scheduled soon.
+                </marquee>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Access Strip -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="0">
+                    <div class="quick-action">
+                        <div class="quick-action-icon">
+                            <i data-feather="book-open"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Courses</h5>
+                        <p class="text-muted mb-0 small">CSSR, MFR, Flood, CBRN</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="quick-action">
+                        <div class="quick-action-icon">
+                            <i data-feather="calendar"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Events</h5>
+                        <p class="text-muted mb-0 small">Seminars & Workshops</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="quick-action">
+                        <div class="quick-action-icon">
+                            <i data-feather="award"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Admissions</h5>
+                        <p class="text-muted mb-0 small">Apply for SDRF Training</p>
+                    </div>
+                </div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="quick-action">
+                        <div class="quick-action-icon">
+                            <i data-feather="image"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Media Gallery</h5>
+                        <p class="text-muted mb-0 small">Photo & Video Albums</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="counter-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="0">
+                    <div class="counter-number">2018</div>
+                    <div class="counter-label">Established Year</div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="counter-number">153</div>
+                    <div class="counter-label">Acres Campus</div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="counter-number">SAARC</div>
+                    <div class="counter-label">Regional Focus</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5" style="background: #f8f9fa;">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h6 class="section-subtitle mb-3"><i data-feather="shield" class="feather-icon me-2"></i>About NDRFA
+                    </h6>
+                    <h2 class="section-title mb-4">Established 2018 under NDMA</h2>
+                    <p class="text-muted mb-4">Evolved from the National Civil Defence College, NDRFA Nagpur is a
+                        premier institution for elite disaster response training under the National Disaster Management
+                        Authority (NDMA).</p>
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="feature-card p-3">
+                                <i data-feather="user" class="feather-icon mb-3"
+                                    style="color: var(--ndrf-green); width: 28px; height: 28px;"></i>
+                                <strong class="d-block fs-6">Director</strong>
+                                <small class="text-muted">Brig R Sathya Narayan</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="feature-card p-3">
+                                <i data-feather="map-pin" class="feather-icon mb-3"
+                                    style="color: var(--ndrf-green); width: 28px; height: 28px;"></i>
+                                <strong class="d-block fs-6">153 Acres</strong>
+                                <small class="text-muted">Nagpur Campus</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="feature-card p-3">
+                                <i data-feather="globe" class="feather-icon mb-3"
+                                    style="color: var(--ndrf-green); width: 28px; height: 28px;"></i>
+                                <strong class="d-block fs-6">SAARC Focus</strong>
+                                <small class="text-muted">Regional Cooperation</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="feature-card p-3">
+                                <i data-feather="compass" class="feather-icon mb-3"
+                                    style="color: var(--ndrf-green); width: 28px; height: 28px;"></i>
+                                <strong class="d-block fs-6">Koradi Temple</strong>
+                                <small class="text-muted">Nagpur, Maharashtra</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="position-relative">
+                        <img src="image/orchids-the-international-school-kohle-layout-nagpur-schools-1ostmaeaaf.avif"
+                            class="img-fluid about-image" alt="NDRFA Nagpur Campus">
+                        <div class="position-absolute"
+                            style="bottom: -20px; right: -20px; width: 150px; height: 150px; background: var(--ndrf-orange);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="section-subtitle">Training Programmes</h6>
+                <h2 class="section-title">Wing A & Wing B</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="course-card">
+                        <span class="badge-wing bg-green text-white mb-4">Wing A</span>
+                        <h4 class="fw-bold mb-2">CSSR</h4>
+                        <p class="text-muted">Collapsed Structure Search & Rescue</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-card">
+                        <span class="badge-wing bg-green text-white mb-4">Wing A</span>
+                        <h4 class="fw-bold mb-2">MFR</h4>
+                        <p class="text-muted">Medical First Responder</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-card">
+                        <span class="badge-wing mb-4" style="background: var(--ndrf-orange); color: white;">Wing
+                            B</span>
+                        <h4 class="fw-bold mb-2">Flood / Diving Rescue</h4>
+                        <p class="text-muted">Advanced flood and underwater rescue</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="course-card">
+                        <span class="badge-wing mb-4" style="background: var(--ndrf-orange); color: white;">Wing
+                            B</span>
+                        <h4 class="fw-bold mb-2">CBRN Response</h4>
+                        <p class="text-muted">Chemical, Biological, Radiological & Nuclear</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="course-card">
+                        <span class="badge-wing bg-dark-orange text-white mb-4">Instructor</span>
+                        <h4 class="fw-bold mb-2">ToT / MT</h4>
+                        <p class="text-muted">Training of Trainers / Master Trainers</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="course-card"
+                        style="background: linear-gradient(135deg, var(--ndrf-green), var(--dark-orange)); color: white;">
+                        <h4 class="fw-bold mb-4">Quick Facts</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i data-feather="users" class="feather-icon me-2"></i> Capacity: _____
+                                personnel/year</li>
+                            <li class="mb-2"><i data-feather="globe" class="feather-icon me-2"></i> SAARC nations focus
+                            </li>
+                            <li><i data-feather="award" class="feather-icon me-2"></i> NDRF / SDRF trainees</li>
+                        </ul>
+                        <a href="#admissions" class="btn fw-bold mt-3"
+                            style="background: var(--ndrf-orange); color: white;">Join a Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="py-5" style="background: #f8f9fa;">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="section-subtitle">Infrastructure</h6>
+                <h2 class="section-title">Academy Facilities</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto">
+                            <i data-feather="home"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Admin & Training Blocks</h5>
+                        <p class="text-muted mb-0">Modern infrastructure for effective learning</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto">
+                            <i data-feather="briefcase"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Hostels</h5>
+                        <p class="text-muted mb-0">120 comfortable rooms for trainees</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto">
+                            <i data-feather="monitor"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Classrooms</h5>
+                        <p class="text-muted mb-0">Equipped with latest teaching technology</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto">
+                            <i data-feather="activity"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Mock Disaster Sites</h5>
+                        <p class="text-muted mb-0">Realistic training environments</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon mx-auto">
+                            <i data-feather="sun"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Green Campus</h5>
+                        <p class="text-muted mb-0">Eco-friendly sustainable environment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <h6 class="section-subtitle">Admissions</h6>
+                    <h2 class="section-title mb-4">Apply for Training</h2>
+                    <p class="text-muted mb-4">Eligibility details, application forms, schedules, and state allocations
+                        for
+                        SDRF.</p>
+                    <div class="row g-4">
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="0">
+                            <div class="d-flex align-items-center">
+                                <div class="stat-icon bg-light-green"
+                                    style="width: 50px; height: 50px; font-size: 1.2rem; margin: 0 1rem 0 0; color: var(--ndrf-green);">
+                                    <i data-feather="check-circle"></i>
+                                </div>
+                                <span class="fw-bold">Eligibility Criteria</span>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+                            <div class="d-flex align-items-center">
+                                <div class="stat-icon bg-light-green"
+                                    style="width: 50px; height: 50px; font-size: 1.2rem; margin: 0 1rem 0 0; color: var(--ndrf-green);">
+                                    <i data-feather="file-text"></i>
+                                </div>
+                                <span class="fw-bold">Application Forms</span>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                            <div class="d-flex align-items-center">
+                                <div class="stat-icon bg-light-green"
+                                    style="width: 50px; height: 50px; font-size: 1.2rem; margin: 0 1rem 0 0; color: var(--ndrf-green);">
+                                    <i data-feather="calendar"></i>
+                                </div>
+                                <span class="fw-bold">Training Schedules</span>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                            <div class="d-flex align-items-center">
+                                <div class="stat-icon bg-light-green"
+                                    style="width: 50px; height: 50px; font-size: 1.2rem; margin: 0 1rem 0 0; color: var(--ndrf-green);">
+                                    <i data-feather="map-pin"></i>
+                                </div>
+                                <span class="fw-bold">State Allocations for SDRF</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="contact-form">
+                        <h4 class="fw-bold mb-4 text-center">Quick Inquiry</h4>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-custom" placeholder="Full Name"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control form-control-custom" placeholder="Email Address"
+                                    required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-custom"
+                                    placeholder="Organization / State Unit">
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100">Submit Application</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5" style="background: #f8f9fa;">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h6 class="section-subtitle">Events / Gallery</h6>
+                <h2 class="section-title">Seminars, Rescues & Albums</h2>
+                <p class="text-muted">Photo and video albums from Nagpur drills will be showcased here.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="0">
+                    <div class="gallery-item">
+                        <img src="image/gallery_1.jpg" alt="NDRFA Gallery 1">
+                        <div class="gallery-overlay">
+                            <span class="text-white fw-bold">Training Session</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="gallery-item">
+                        <img src="image/gallery_2.jpg" alt="NDRFA Gallery 2">
+                        <div class="gallery-overlay">
+                            <span class="text-white fw-bold">Rescue Drill</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="gallery-item">
+                        <img src="image/gallery_3.jpg" alt="NDRFA Gallery 3">
+                        <div class="gallery-overlay">
+                            <span class="text-white fw-bold">Event Gallery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Testimonials from NDRF / SDRF Trainees</h2>
+                <p class="text-muted">Photographs of the Toppers in recent courses will be displayed here.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                    <div class="testimonial-card">
+                        <div class="testimonial-avatar">
+                            <i data-feather="user"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Trainee Name</h5>
+                        <p class="text-success small mb-3">Course Name & Batch</p>
+                        <p class="fst-italic text-muted">"Excellent training experience with hands-on sessions and
+                            expert instructors."</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-avatar">
+                            <i data-feather="user"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Trainee Name</h5>
+                        <p class="text-success small mb-3">Course Name & Batch</p>
+                        <p class="fst-italic text-muted">"The facilities and curriculum are world-class. Highly
+                            recommended!"</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-avatar">
+                            <i data-feather="user"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Trainee Name</h5>
+                        <p class="text-success small mb-3">Course Name & Batch</p>
+                        <p class="fst-italic text-muted">"Best disaster response training in the region. Professional
+                            staff."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5" style="background: #f8f9fa;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <h2 class="section-title mb-4">Contact Us</h2>
+                    <div class="mb-4">
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="stat-icon me-3" style="margin: 0;">
+                                <i data-feather="map-pin"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Address</h6>
+                                <p class="text-muted mb-0">Civil Lines, Nagpur, Maharashtra, India</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="stat-icon me-3" style="margin: 0;">
+                                <i data-feather="phone"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Phone</h6>
+                                <p class="text-muted mb-0">+91-712-2567890</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="stat-icon me-3" style="margin: 0;">
+                                <i data-feather="mail"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Email</h6>
+                                <p class="text-muted mb-0">enquiry@ndrfa.gov.in</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.1086905012976!2d79.06615207597189!3d21.148072383668612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0f44023873b%3A0x856bc3f66e3f559f!2sNational%20Civil%20Defence%20College%20(NDRF%20Academy)!5e0!3m2!1sen!2sin!4v1776842143274!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="contact-form">
+                        <h4 class="fw-bold mb-4">Inquiry Form</h4>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control form-control-custom" placeholder="Full Name"
+                                        required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control form-control-custom"
+                                        placeholder="Email Address" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control form-control-custom"
+                                        placeholder="Organization / State Unit">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control form-control-custom" rows="4"
+                                        placeholder="Your message or inquiry..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary-custom">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- External Links -->
+    <section class="py-4 border-top" style="background: #f8f9fa;">
+        <div class="container text-center">
+            <h6 class="text-uppercase text-secondary small fw-bold mb-4">Important External Links</h6>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="#" class="btn btn-outline-dark rounded-0 px-4 py-2">MHA</a>
+                <a href="#" class="btn btn-outline-dark rounded-0 px-4 py-2">NDMA</a>
+                <a href="#" class="btn btn-outline-dark rounded-0 px-4 py-2">NDRF</a>
+                <a href="#" class="btn btn-outline-dark rounded-0 px-4 py-2">NIDM</a>
+                <a href="#" class="btn btn-outline-dark rounded-0 px-4 py-2">IGOT</a>
+                <a href="#" class="btn btn-outline-dark rounded-0 px-4 py-2">NDEM</a>
+                <a href="#" class="btn btn-outline-dark rounded-0 px-4 py-2">IDRN</a>
+                <a href="#" class="btn btn-outline-dark rounded-0 px-4 py-2">IMD</a>
+                <a href="#" class="btn btn-outline-dark rounded-0 px-4 py-2">CWC</a>
+                <a href="#" class="btn btn-outline-dark rounded-0 px-4 py-2">INSARAG</a>
+                <a href="#" class="btn btn-outline-dark rounded-0 px-4 py-2">GDACS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-white">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h4 class="fw-bold mb-4">NDRF Academy Nagpur</h4>
+                    <p class="opacity-75 mb-4">"Aapda Sewa Sadaiv Sarvatra" — Service in disasters always, everywhere.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="social-link"><i data-feather="youtube"></i></a>
+                        <a href="#" class="social-link"><i data-feather="facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="fw-bold mb-4">Academy</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#about" class="footer-link">About Us</a></li>
+                        <li><a href="#facilities" class="footer-link">Infrastructure</a></li>
+                        <li><a href="#courses" class="footer-link">Courses</a></li>
+                        <li><a href="#admissions" class="footer-link">Admissions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-4">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Training Calendar</a></li>
+                        <li><a href="#" class="footer-link">E-LMS Portal</a></li>
+                        <li><a href="#" class="footer-link">Procurement</a></li>
+                        <li><a href="#" class="footer-link">Recruitment</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="fw-bold mb-4">Contact</h6>
+                    <p class="opacity-75 mb-2"><i data-feather="map-pin" class="feather-icon me-2"></i> Civil Lines,
+                        Nagpur</p>
+                    <p class="opacity-75 mb-2"><i data-feather="phone" class="feather-icon me-2"></i> +91-712-2567890
+                    </p>
+                    <p class="opacity-75 mb-4"><i data-feather="mail" class="feather-icon me-2"></i>
+                        enquiry@ndrfa.gov.in</p>
+                    <a href="#" class="text-white-50 text-decoration-none small">हिन्दी Version</a>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary">
+            <p class="text-center opacity-50 small mb-0">&copy; 2024 National Disaster Response Force Academy, Nagpur.
+                All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        feather.replace();
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>

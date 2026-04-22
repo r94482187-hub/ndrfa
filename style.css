@@ -1,0 +1,331 @@
+/* NDRFA Nagpur — Modern Flat Design */
+
+:root {
+    --ndrf-green: #006633;
+    --ndrf-orange: #FF6600;
+    --light-green: #90EE90;
+    --dark-orange: #CC5200;
+    --primary: var(--ndrf-green);
+    --secondary: var(--ndrf-orange);
+    --transition: all 0.25s ease;
+}
+
+/* Global Reset */
+.btn,
+.form-control {
+    border-radius: 2px !important;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #1e293b;
+    background: #fff;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+    font-family: 'Outfit', sans-serif;
+}
+
+.text-teal,
+.text-green {
+    color: var(--ndrf-green) !important;
+}
+
+.bg-teal,
+.bg-green {
+    background-color: var(--ndrf-green) !important;
+}
+
+.border-teal,
+.border-green {
+    border-color: var(--ndrf-green) !important;
+}
+
+.text-orange {
+    color: var(--ndrf-orange) !important;
+}
+
+.bg-orange {
+    background-color: var(--ndrf-orange) !important;
+}
+
+.text-dark-orange {
+    color: var(--dark-orange) !important;
+}
+
+.bg-dark-orange {
+    background-color: var(--dark-orange) !important;
+}
+
+.bg-light-green {
+    background-color: var(--light-green) !important;
+}
+
+.btn-teal,
+.btn-green {
+    background: var(--ndrf-green) !important;
+    border-color: var(--ndrf-green) !important;
+    color: white !important;
+}
+
+.btn-teal:hover,
+.btn-green:hover {
+    background: var(--light-green) !important;
+    color: var(--ndrf-green) !important;
+}
+
+.btn-orange {
+    background: var(--ndrf-orange) !important;
+    border-color: var(--ndrf-orange) !important;
+    color: white !important;
+}
+
+.btn-orange:hover {
+    background: var(--dark-orange) !important;
+}
+
+.btn-outline-orange {
+    border: 2px solid var(--ndrf-orange) !important;
+    color: var(--ndrf-orange) !important;
+    background: transparent !important;
+}
+
+.btn-outline-orange:hover {
+    background: var(--ndrf-orange) !important;
+    color: white !important;
+}
+
+/* Top Bar */
+.top-bar {
+    background: var(--dark-orange);
+    font-size: 0.85rem;
+}
+
+/* Navbar */
+.main-nav {
+    background: var(--ndrf-green);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    padding: 0.5rem 0.8rem !important;
+    transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--ndrf-orange) !important;
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+}
+
+.dropdown-item {
+    font-weight: 500;
+    padding: 0.4rem 0.75rem;
+    transition: var(--transition);
+}
+
+.dropdown-item:hover {
+    background: var(--light-green);
+    color: var(--ndrf-green);
+}
+
+/* Hero */
+.hero-banner {
+    height: 90vh;
+    min-height: 90vh;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-mask {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(75deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.6) 50%, transparent 100%);
+    z-index: 2;
+}
+
+.hero-text {
+    z-index: 3;
+    max-width: 750px;
+}
+
+/* Quick Strip */
+.quick-link {
+    text-decoration: none;
+    color: #1e293b;
+    transition: var(--transition);
+}
+
+.quick-link:hover {
+    background: var(--light-green);
+    color: var(--ndrf-green);
+}
+
+/* Feather Icons - Stroke Reveal Animation */
+.feather-icon {
+    width: 42px;
+    height: 42px;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    display: block;
+}
+
+.feather-icon path,
+.feather-icon polyline,
+.feather-icon line,
+.feather-icon circle,
+.feather-icon ellipse,
+.feather-icon polygon {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: strokeReveal 2s ease-out forwards;
+}
+
+@keyframes strokeReveal {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.quick-link:hover .feather-icon {
+    color: var(--dark-orange) !important;
+    transition: color 0.3s ease;
+}
+
+/* Course Cells */
+.course-cell {
+    transition: var(--transition);
+}
+
+.course-cell:hover {
+    background: var(--light-green) !important;
+}
+
+/* Facility Cells */
+.facility-cell {
+    transition: var(--transition);
+}
+
+.facility-cell:hover {
+    background: var(--light-green);
+}
+
+/* Section Backgrounds */
+.section-alt {
+    background: #f8fafc;
+}
+
+.section-dark {
+    background: var(--dark-orange);
+}
+
+.section-navy {
+    background: var(--ndrf-green);
+}
+
+/* External Links */
+.ext-link {
+    background: #fff;
+    padding: 0.4rem 1rem;
+    color: #64748b;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    border: 1px solid #cbd5e1;
+    transition: var(--transition);
+}
+
+.ext-link:hover {
+    background: var(--ndrf-orange);
+    color: white;
+    border-color: var(--ndrf-orange);
+}
+
+/* Footer */
+.footer-links a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.6rem;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--ndrf-orange);
+    padding-left: 5px;
+}
+
+.social-icon {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.08);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-icon:hover {
+    background: var(--ndrf-orange);
+    color: white;
+}
+
+/* Mobile */
+@media (max-width: 1199.98px) {
+    .navbar-collapse {
+        background: var(--ndrf-green);
+        padding: 1.5rem;
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .display-2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-banner {
+        height: 70vh;
+    }
+}
+
+@media (min-width: 1500px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1500px !important;
+    }
+}
+
+.ticker-bar {
+    background: var(--ndrf-green);
+
+}
